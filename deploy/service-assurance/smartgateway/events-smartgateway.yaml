@@ -1,0 +1,11 @@
+apiVersion: smartgateway.infra.watch/v1alpha1
+kind: SmartGateway
+metadata:
+  name: events
+spec:
+  size: 1
+  amqp_url: qdr-white.sa-telemetry.svc.cluster.local:5672/collectd/notify
+  debug: "true"
+  container_image_path: 172.30.1.1:5000/sa-telemetry/smart-gateway
+  service_type: "events"
+# vim: set tabstop=2 shiftwidth=2 expandtab smartindent:
